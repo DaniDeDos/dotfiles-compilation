@@ -1,7 +1,7 @@
 <h1>Instalar Volta + Tools</h1>
  
-### Volta ( Istalacion manual )
-> ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
+### Instalación Manual de Volta
+> ##### ⚠ Cambiar `~/.bashrc` por `~/.zshrc` si usa bash.
 - Actualizar el sistema.
   ```js
   sudo pacman -Sy
@@ -10,7 +10,7 @@
   ```bash
   curl https://get.volta.sh | bash
   ```
-- Editar el archivo de perfil de la shell para ejecutarlo global.
+- Editar el archivo de perfil de la shell.
   ```bash
   echo 'export PATH="/opt/V/bin:$PATH"' >> ~/.zshrc
   ```
@@ -18,7 +18,7 @@
   ```bash
   source ~/.zshrc
   ```
-- Comprobar version.
+- Comprobar versión.
   ```js
   volta --version
   ```
@@ -48,13 +48,13 @@
 
 ### Tool ( Node )
 
-> ##### 💡 Recurde que `node` ya trae cosigo `npm` y `npx`.
+> ##### 💡 Recuerde que `node` viene con `npm` y `npx` incorporados.
 
 - Instalar node.
   ```js
   volta install node
   ```
-- Comprobar version None.
+- Comprobar versión None.
 
   ```js
   node --version
@@ -71,13 +71,13 @@
 
 ### Tool ( Yarn )
 
-> ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
+> ##### ⚠ En algunos casos requiere `vpn`.
 
 - Instalar yarn.
   ```js
   volta install yarn
   ```
-- Comprobar version.
+- Comprobar versión.
   ```js
   yarn --version
   ```
@@ -88,8 +88,6 @@
 > - Es un administrador de paquetes de JavaScript alternativo a npm. Ofrece mejoras en términos de velocidad, seguridad y simplicidad en comparación con npm.
 
 </details>
-
-
 
 > - `Nota:` Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
 
