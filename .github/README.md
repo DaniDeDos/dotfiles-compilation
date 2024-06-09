@@ -26,8 +26,9 @@
 <summary><b>Descripción</b></summary>
 <h5>
   
-> - Es una herramienta de administración de versiones de `Node.js` diseñada para simplificar el proceso de manejo de múltiples versiones de `Node.js` y paquetes globales en entornos de desarrollo. Con `Volta`, puedes seleccionar una versión de `Node.js` y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
->> </h5>
+> - Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
+
+</h5>
 </details>
 <details closed>
     <summary><b>Características</b></summary>
@@ -47,7 +48,7 @@
 
 ### Tool ( Node )
 
-> ##### ⚠ Recurde que `node` ya trae cosigo `npm` y npx.
+> ##### ⚠ Recurde que `node` ya trae cosigo `npm` y `npx`.
 
 - Instalar node.
   ```js
