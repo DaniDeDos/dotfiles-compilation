@@ -1,11 +1,9 @@
 <h1>Instalar Volta + Tools</h1>
    
 <details closed>
-    <summary><b>Volta info.</b></summary>
+    <summary><b>Volta</b></summary>
     <h4>Descripción</h4>
-    <p>
-    Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
-    </p>
+
     <h4>Características</h4>
     <ul>
     <li>
@@ -53,11 +51,15 @@
   ```js
   volta --version
   ```
-
-sed -i '/^ *export PATH="\/opt\/V\/bin:$PATH"/d' ~/.zshrc
-
-
+<details closed>
+    <summary><b>Descripción</b></summary>
+    <p>
+    Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
+    </p>
 </details>
+
+
+
 
 
 <details closed>
@@ -81,6 +83,8 @@ sed -i '/^ *export PATH="\/opt\/V\/bin:$PATH"/d' ~/.zshrc
 > Istalacion manual.
 
 Nota: Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
+
+sed -i '/^ *export PATH="\/opt\/V\/bin:$PATH"/d' ~/.zshrc
 
 <!--
 Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
