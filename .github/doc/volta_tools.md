@@ -10,6 +10,11 @@
   ```bash
   curl https://get.volta.sh | bash
   ```
+- Exportar las variables al archivo del perfil de la shell. 
+  ```bash
+  echo 'export VOLTA_HOME="$HOME/.volta"' >> ~/.zshrc
+  echo 'export PATH="$VOLTA_HOME/bin:$PATH"' >> ~/.zshrc
+  ```
 - Recargar el archivo del perfil.
   ```bash
   source ~/.zshrc # O ~/.bashrc
@@ -91,11 +96,9 @@
 
 ---
 
-### Desinstalar Volta ( manual )
+<h2>Desinstalar Volta ( manual )</h2>
 
-> #####
-
-- Desinstala Volta.
+- Desinstalar Volta.
   ```js
   rm -rf ~/.volta
   ```
@@ -108,3 +111,12 @@
   ```js
   source ~/.zshrc
   ```
+
+<h2>Referencias</h2>
+<ul>
+    <li>
+        <a target="_blank" rel="noreferrer" href="https://docs.volta.sh/guide/getting-started">
+        Volta
+        </a>
+    </li>
+</ul>
