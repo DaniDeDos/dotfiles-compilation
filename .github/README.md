@@ -23,13 +23,13 @@
   volta --version
   ```
 <details closed>
-    <summary><b>Descripción</b></summary>
+    <summary><h5>Descripción</h5></summary>
     <p>
     Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
     </p>
 </details>
 <details closed>
-    <summary><b>Características</b></summary>
+    <summary><h5>Características</h5></summary>
     <ul>
     <li>
     Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, Volta asegura versiones confiables y consistentes en todos los proyectos.
@@ -52,9 +52,34 @@
     </ul>
 </details>
 
+### Node ( Istalacion manual via volta)
+
+> ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
+
+- Actualizar el sistema.
+  ```js
+  volta install node
+  ```
+- Comprobar version.
+  ```js
+  node --version
+  ```
+
+### Yarn ( Istalacion manual via volta)
+
+> ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
+
+- Actualizar el sistema.
+  ```js
+  volta install yarn
+  ```
+- Comprobar version.
+  ```js
+  node --version
+  ```  
+
 <details closed>
-    <summary><b>Node</b></summary>
-    <h3>Descripción</h3>
+    <summary><h5>Descripción</h5></summary>
     <p>
     Es un entorno de ejecución de JavaScript de alto rendimiento y de código abierto. Se utiliza para ejecutar código JavaScript fuera de un navegador web, permitiendo el desarrollo de aplicaciones de servidor, scripts y herramientas de línea de comandos.
     </p>
@@ -63,8 +88,7 @@
 > Istalacion manual.
 
 <details closed>
-    <summary><b>Yarn</b></summary>
-    <h3>Descripción</h3>
+    <summary><h5>Descripción</h5></summary>
     <p>
     Es un administrador de paquetes de JavaScript alternativo a npm. Ofrece mejoras en términos de velocidad, seguridad y simplicidad en comparación con npm. Al igual que Node.js.
     </p>
