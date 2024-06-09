@@ -34,12 +34,12 @@
     <summary><b>Características</b></summary>
  <h5>
 
-> - Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, `Volta` asegura versiones confiables y consistentes en todos los proyectos.
-> - Cambios fluidos entre versiones de `Node.js`: Permite cambiar entre versiones de `Node.js` sin modificar las variables de entorno PATH.
-> - Soporte para herramientas instaladas globalmente: Integra directamente con `npm` y `yarn`, permitiendo gestionar tanto `Node.js` como los paquetes globales relacionados.
+> - Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, Volta asegura versiones confiables y consistentes en todos los proyectos.
+> - Cambios fluidos entre versiones de Node.js: Permite cambiar entre versiones de Node.js sin modificar las variables de entorno PATH.
+> - Soporte para herramientas instaladas globalmente: Integra directamente con npm y yarn, permitiendo gestionar tanto Node.js como los paquetes globales relacionados.
 > - Caché inteligente: Mejora el flujo de trabajo de desarrollo al acelerar la carga de paquetes y herramientas.
-> - Compatibilidad con `.nvmrc`: Soporta el mismo archivo de configuración que `NVM`, facilitando la transición entre herramientas.
-> - Ambientes reproductibles para colaboradores: Al guardar la versión exacta de `Node.js` en el `package.json`, garantiza que todos los colaboradores trabajen con la misma versión, promoviendo la consistencia en equipos de desarrollo distribuidos.
+> - Compatibilidad con .nvmrc: Soporta el mismo archivo de configuración que NVM, facilitando la transición entre herramientas.
+> - Ambientes reproductibles para colaboradores: Al guardar la versión exacta de Node.js en el package.json, garantiza que todos los colaboradores trabajen con la misma versión, promoviendo la consistencia en equipos de desarrollo distribuidos.
 
    </h5>
 </details>
@@ -63,7 +63,7 @@
 <details closed>
   <summary><h5>Descripción</h5></summary>
 
-> - Es un entorno de ejecución de `JavaScript` de alto rendimiento y de código abierto. Se utiliza para ejecutar código `JavaScript` fuera de un navegador web, permitiendo el desarrollo de aplicaciones de servidor, `scripts` y herramientas de línea de comandos.
+> - Es un entorno de ejecución de JavaScript de alto rendimiento y de código abierto. Se utiliza para ejecutar código JavaScript fuera de un navegador web, permitiendo el desarrollo de aplicaciones de servidor, scripts y herramientas de línea de comandos.
 
 </details>
 
@@ -85,15 +85,14 @@
 <details closed>
   <summary><h5>Descripción</h5></summary>
 
-> - Es un administrador de paquetes de `JavaScript` alternativo a `npm`. Ofrece mejoras en términos de velocidad, seguridad y simplicidad en comparación con `npm`.
+> - Es un administrador de paquetes de JavaScript alternativo a npm. Ofrece mejoras en términos de velocidad, seguridad y simplicidad en comparación con npm.
 
 </details>
 
 ---
 
-<h5>
-`Nota:` `Volta` actúa como una capa de abstracción que simplifica la gestión de versiones de `Node.js` y `Yarn`, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
-</h5>
+> - `Nota:` Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
+
 sed -i '/^ \*export PATH="\/opt\/V\/bin:$PATH"/d' ~/.zshrc
 
 <!--
