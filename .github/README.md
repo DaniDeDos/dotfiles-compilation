@@ -1,9 +1,5 @@
 <h1>Instalar Volta + Tools</h1>
    
-<details closed>
-    <summary><b>Volta</b></summary>
-    <h4>Descripción</h4>
-
     <h4>Características</h4>
     <ul>
     <li>
