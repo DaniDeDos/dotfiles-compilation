@@ -6,14 +6,14 @@
     
     <br>
 
-    <details closed>
-        <summary><b>Volta</b></summary>
-        <summary><b>Node</b></summary>
-        <summary><b>Yarn</b></summary>
+<details closed>
+    <summary><b>Volta</b></summary>
+    <summary><b>Node</b></summary>
+    <summary><b>Yarn</b></summary>
 
-        <br>
+    <br>
 
-    </details>
+</details>
 
 </details>
 
