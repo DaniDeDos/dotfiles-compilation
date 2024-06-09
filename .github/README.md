@@ -1,26 +1,7 @@
-<div aling="center">
- __      __   _ _                  _______          _     
-</div>
-<div aling="center">
- \ \    / /  | | |           _    |__   __|        | |    
-</div>
-<div aling="center">
-  \ \  / /__ | | |_ __ _   _| |_     | | ___   ___ | |___  
-</div>
-<div aling="center">
-   \ \/ / _ \| | __/ _` | |_   _|    | |/ _ \ / _ \| / __|
-</div>
-<div aling="center">
-    \  / (_) | | || (_| |   |_|      | | (_) | (_) | \__ \
-</div>
-<div aling="center">
-     \/ \___/|_|\__\__,_|            |_|\___/ \___/|_|___/
-</div>
-
-<h2>Instalar Volta + Tools</h2>
+<h1>Instalar Volta + Tools</h1>
    
 <details closed>
-    <summary><b>Volta</b></summary>
+    <summary><b>Volta info.</b></summary>
     <h4>Descripción</h4>
     <p>
     Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
@@ -46,9 +27,38 @@
     Ambientes reproductibles para colaboradores: Al guardar la versión exacta de Node.js en el package.json, garantiza que todos los colaboradores trabajen con la misma versión, promoviendo la consistencia en equipos de desarrollo distribuidos.
     </li> 
     </ul>
-</details>
+
 
 > Istalacion manual.
+  > ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
+>
+- Actualizar el sistema.
+  
+  ```js
+  sudo pacman -Sy
+  ```
+- Descargar e instalar Volta.
+  ```bash
+  curl https://get.volta.sh | bash
+  ```
+- Editar el archivo de perfil de la shell para ejecutarlo global.
+  ```bash
+  echo 'export PATH="/opt/V/bin:$PATH"' >> ~/.zshrc
+  ```
+- Recargar el archivo del perfil.
+  ```bash
+  source ~/.zshrc
+  ```
+- Comprobar version.
+  ```js
+  volta --version
+  ```
+
+sed -i '/^ *export PATH="\/opt\/V\/bin:$PATH"/d' ~/.zshrc
+
+
+</details>
+
 
 <details closed>
     <summary><b>Node</b></summary>
