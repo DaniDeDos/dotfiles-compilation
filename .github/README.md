@@ -23,13 +23,13 @@
   volta --version
   ```
 <details closed>
-    <summary><h5>Descripción</h5></summary>
+    <summary><b>Descripción</b></summary>
     <p>
     Es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js y dejar de preocuparte por cambiarla manualmente entre proyectos. Permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
     </p>
 </details>
 <details closed>
-    <summary><h5>Características</h5></summary>
+    <summary><b>Características</b></summary>
     <ul>
     <li>
     Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, Volta asegura versiones confiables y consistentes en todos los proyectos.
@@ -52,7 +52,7 @@
     </ul>
 </details>
 
-### Node ( Istalacion manual via volta)
+### Tool ( Node )
 
 > ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
 
@@ -71,7 +71,7 @@
       </p>
   </details>
 
-### Yarn ( Istalacion manual via volta)
+### Tool ( Yarn )
 
 > ##### ⚠ Sustituir `~/.bashrc` por `~/.zshrc` si uasas bash
 
