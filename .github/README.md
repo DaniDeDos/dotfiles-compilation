@@ -1,4 +1,4 @@
-<h2>Instalar Volta + Node + Yarn</h2>
+<h2>Instalar Volta + Tools</h2>
 
 Volta es una herramienta de administración de versiones de Node.js diseñada para simplificar el proceso de manejo de múltiples versiones de Node.js y paquetes globales en entornos de desarrollo. Con Volta, puedes seleccionar una versión de Node.js una vez y dejar de preocuparte por cambiarla manualmente entre proyectos. Además, permite instalar binarios de paquetes npm en tu cadena de herramientas sin tener que reinstalarlos periódicamente o averiguar por qué han dejado de funcionar.
 
