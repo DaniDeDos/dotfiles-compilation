@@ -3,6 +3,7 @@
 
 <details closed>
     <summary><b>Ver Mas</b></summary>
+    
     <br>
 
     <details closed>
