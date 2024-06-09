@@ -9,25 +9,27 @@
     <h4>Características</h4>
     <ul>
     <li>
-    - Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, Volta asegura versiones confiables y consistentes en todos los proyectos.
+    Resolución inteligente de versiones: Basándose en los manifiestos de los gestores de paquetes, Volta asegura versiones confiables y consistentes en todos los proyectos.
     </li>
     <li>
-    - Cambios fluidos entre versiones de Node.js: Permite cambiar entre versiones de Node.js sin modificar las variables de entorno PATH.
+    Cambios fluidos entre versiones de Node.js: Permite cambiar entre versiones de Node.js sin modificar las variables de entorno PATH.
     </li>
     <li>
-    - Soporte para herramientas instaladas globalmente: Integra directamente con npm y yarn, permitiendo gestionar tanto Node.js como los paquetes globales relacionados.
+    Soporte para herramientas instaladas globalmente: Integra directamente con npm y yarn, permitiendo gestionar tanto Node.js como los paquetes globales relacionados.
     </li>
     <li>
-    - Caché inteligente: Mejora el flujo de trabajo de desarrollo al acelerar la carga de paquetes y herramientas.
+    Caché inteligente: Mejora el flujo de trabajo de desarrollo al acelerar la carga de paquetes y herramientas.
     </li> 
     <li>
-    - Compatibilidad con .nvmrc: Soporta el mismo archivo de configuración que NVM, facilitando la transición entre herramientas.
+    Compatibilidad con .nvmrc: Soporta el mismo archivo de configuración que NVM, facilitando la transición entre herramientas.
     </li> 
     <li>
-    - Ambientes reproductibles para colaboradores: Al guardar la versión exacta de Node.js en el package.json, garantiza que todos los colaboradores trabajen con la misma versión, promoviendo la consistencia en equipos de desarrollo distribuidos.
+    Ambientes reproductibles para colaboradores: Al guardar la versión exacta de Node.js en el package.json, garantiza que todos los colaboradores trabajen con la misma versión, promoviendo la consistencia en equipos de desarrollo distribuidos.
     </li> 
     </ul>
 </details>
+
+> Istalacion manual.
 
 <details closed>
     <summary><b>Node</b></summary>
@@ -37,6 +39,8 @@
     </p>
 </details>
 
+> Istalacion manual.
+
 <details closed>
     <summary><b>Yarn</b></summary>
     <h3>Descripción</h3>
@@ -45,11 +49,7 @@
     </p>
 </details>
 
-> Volta:
-
-
-> Node:
-> Yarn:
+> Istalacion manual.
 
 Nota: Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
 
