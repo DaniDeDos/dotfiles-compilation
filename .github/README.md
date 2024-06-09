@@ -64,6 +64,12 @@
   ```js
   node --version
   ```
+  <details closed>
+      <summary><h5>Descripción</h5></summary>
+      <p>
+      Es un entorno de ejecución de JavaScript de alto rendimiento y de código abierto. Se utiliza para ejecutar código JavaScript fuera de un navegador web, permitiendo el desarrollo de aplicaciones de servidor, scripts y herramientas de línea de comandos.
+      </p>
+  </details>
 
 ### Yarn ( Istalacion manual via volta)
 
@@ -76,16 +82,7 @@
 - Comprobar version.
   ```js
   node --version
-  ```  
-
-<details closed>
-    <summary><h5>Descripción</h5></summary>
-    <p>
-    Es un entorno de ejecución de JavaScript de alto rendimiento y de código abierto. Se utiliza para ejecutar código JavaScript fuera de un navegador web, permitiendo el desarrollo de aplicaciones de servidor, scripts y herramientas de línea de comandos.
-    </p>
-</details>
-
-> Istalacion manual.
+  ```
 
 <details closed>
     <summary><h5>Descripción</h5></summary>
@@ -93,8 +90,6 @@
     Es un administrador de paquetes de JavaScript alternativo a npm. Ofrece mejoras en términos de velocidad, seguridad y simplicidad en comparación con npm. Al igual que Node.js.
     </p>
 </details>
-
-> Istalacion manual.
 
 Nota: Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
 
