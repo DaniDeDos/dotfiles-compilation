@@ -48,7 +48,7 @@
 
 ### Tool ( Node )
 
-> ##### ⚠ Recurde que `node` ya trae cosigo `npm` y `npx`.
+> ##### 💡 Recurde que `node` ya trae cosigo `npm` y `npx`.
 
 - Instalar node.
   ```js
@@ -89,7 +89,7 @@
 
 </details>
 
----
+
 
 > - `Nota:` Volta actúa como una capa de abstracción que simplifica la gestión de versiones de Node.js y Yarn, permitiendo a los desarrolladores centrarse en el desarrollo sin tener que lidiar con la complejidad de mantener múltiples versiones de estas herramientas.
 
