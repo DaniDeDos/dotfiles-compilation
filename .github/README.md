@@ -9,8 +9,6 @@
 
 </details>
 
-, asumiendo riesgos propios.
-
 > [!IMPORTANT]
 > Diseñado para Arch Linux
 > Coexistencia de HyDE con DE/WM es factible, pero su personalización intensiva puede causar interferencias con temas GTK/Qt, Shell, SDDM, GRUB, etc.
