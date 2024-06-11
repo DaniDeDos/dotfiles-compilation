@@ -10,11 +10,22 @@
 </details>
 
 > [!IMPORTANT]
-> Diseñado para Arch Linux
-> Coexistencia de HyDE con DE/WM es factible, pero su personalización intensiva puede causar interferencias con temas GTK/Qt, Shell, SDDM, GRUB, etc.
+> Diseñado para Arch Linux.
+> La coexistencia de HyDE con DE/WM es factible, pero su personalización intensiva puede causar interferencias con temas GTK/Qt, Shell, SDDM, GRUB, etc.
 
 > [!CAUTION]
 > Corresponde a sus propios riesgos.
+
+<br>
+<h2>Proyecto en Desarrollo</h2>
+<br>
+
+<details open>
+  <summary><h2>Tal vez sea de su interez</h2></summary>
+  
+- Instalación de Volta, Node.js y Yarn.
+
+</details>
 
   <!--
   Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
