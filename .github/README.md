@@ -23,9 +23,24 @@
 <details open>
   <summary><h2>Tal vez sea de su interez</h2></summary>
   
-- Instalación de Volta, Node.js y Yarn.
+Instalación de Volta + Node + Yarn. (Método Manual)
+
+    - Instalar Volta.
+    > Primero instalar Volta, un administrador de versiones para Node.js
+
+    - Instalar Node.js.
+    > Una vez instalado Volta, puedes instalar  la última versión estable de Node.js.
+
+    - Instalar Yarn.
+    > Con Volta Node.js instalado, ahora puedes instalar Yarn, un administrador de paquetes rápido, seguro y confiable.
+
+Instalación de Volta + Node + Yarn.  (Método Script)
+
+- realizara estos pasos automaticos
 
 </details>
+
+
 
   <!--
   Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
