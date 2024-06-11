@@ -20,19 +20,54 @@
 <h2>Proyecto en Desarrollo</h2>
 <br>
 
-<h2>Tal vez sea de su interez</h2>
+# Instalación de Herramientas Independientes
 
-### Instalación de Volta + Node + Yarn. ()</h2>
+## Desarrolladores Tools
 
-- Vía Manual
+### Node.js y Yarn
 
-  > Primero instalar Volta, un administrador de versiones para Node.js
-  > Una vez instalado Volta, instalar la última versión estable de Node.js.
-  > Con Volta y Node.js instalado, ahora puedes instalar Yarn, un administrador de paquetes rápido, seguro y confiable.
+- **Node.js**: Instala la última versión estable.
+- **Yarn**: A través de Volta, un administrador de versiones para Node.js.
 
-- Vía Script
+### Editor de Código
 
-  > Realizar estos pasos automáticamente.
+- **VSCode**: Descarga e instala desde el sitio oficial.
+
+## Terminal y Herramientas
+
+### Terminal
+
+- **Kitty**: Un terminal moderno y eficiente.
+- **Alacritty**: Otra opción rápida y ligera.
+
+### Editores de Texto
+
+- **Vim**: Un editor de texto altamente configurable.
+- **Neovim**: Una bifurcación de Vim con soporte para plugins y facilidades de desarrollo.
+
+## Pasos Generales
+
+1. **Instalar Volta** (si aún no lo has hecho): Para gestionar tus versiones de Node.js y Yarn.
+2. **Instalar VSCode**: Elige el plan que mejor se adapte a tus necesidades.
+3. **Configurar tu entorno de desarrollo**: Selecciona tu terminal preferido y configúralo según tus gustos.
+
+## Recursos Adicionales
+
+### Documentación Oficial
+
+- **Volta**: [Enlace a la documentación oficial de Volta](https://volta.sh/)
+- **Node.js**: [Enlace a la documentación oficial de Node.js](https://nodejs.org/en/docs/)
+- **Yarn**: [Enlace a la documentación oficial de Yarn](https://yarnpkg.com/getting-started)
+
+### Comunidades Online
+
+- **Otra Comunidad**: [Descripción breve y enlace]
+- **Otra Comunidad 2**: [Descripción breve y enlace]
+
+### Repositorios Públicos
+
+- **Repo 1**: [Descripción breve y enlace]
+- **Repo 2**: [Descripción breve y enlace]
 
 <!--
 Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
