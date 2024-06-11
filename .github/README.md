@@ -20,30 +20,21 @@
 <h2>Proyecto en Desarrollo</h2>
 <br>
 
-<details open>
-  <summary><h2>Tal vez sea de su interez</h2></summary>
-  
-Instalación de Volta + Node + Yarn. (Método Manual)
+<h2>Tal vez sea de su interez</h2>
 
-    - Instalar Volta.
-    > Primero instalar Volta, un administrador de versiones para Node.js
+### Instalación de Volta + Node + Yarn. ()</h2>
 
-    - Instalar Node.js.
-    > Una vez instalado Volta, puedes instalar  la última versión estable de Node.js.
+- Vía Manual
 
-    - Instalar Yarn.
-    > Con Volta Node.js instalado, ahora puedes instalar Yarn, un administrador de paquetes rápido, seguro y confiable.
+  > Primero instalar Volta, un administrador de versiones para Node.js
+  > Una vez instalado Volta, instalar la última versión estable de Node.js.
+  > Con Volta y Node.js instalado, ahora puedes instalar Yarn, un administrador de paquetes rápido, seguro y confiable.
 
-Instalación de Volta + Node + Yarn.  (Método Script)
+- Vía Script
 
-- realizara estos pasos automaticos
+  > Realizar estos pasos automáticamente.
 
-</details>
-
-
-
-  <!--
-  Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
-
+<!--
+Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
 alias neofetch="neofetch --size none"
 --!>
