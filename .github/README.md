@@ -20,6 +20,8 @@
 <h2>Proyecto en Desarrollo</h2>
 <br>
 
+`Nota:` Para instalar o configurar algunas de estos recursos de manera independiente, <a href="https://github.com/DaniDeDos/tools-compilation" target="_blank" rel="noreferrer" >click aquí</a>.
+
 <!--
 Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
 alias neofetch="neofetch --size none"
