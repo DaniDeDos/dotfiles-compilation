@@ -20,44 +20,34 @@
 <h2>Proyecto en Desarrollo</h2>
 <br>
 
-# Instalación de Herramientas Independientes
+# Instalaciones Independientes
 
 ## Desarrolladores Tools
 
-### Node.js y Yarn
+<h3><a>Volta, Node.js y Yarn</a></h3>
+<h3><a>Editor de Código</a></h3>
 
-- **Node.js**: Instala la última versión estable.
-- **Yarn**: A través de Volta, un administrador de versiones para Node.js.
-
-### Editor de Código
-
-- **VSCode**: Descarga e instala desde el sitio oficial.
+- **VSCode**
 
 ## Terminal y Herramientas
 
 ### Terminal
 
-- **Kitty**: Un terminal moderno y eficiente.
-- **Alacritty**: Otra opción rápida y ligera.
+- **Kitty**
 
 ### Editores de Texto
 
-- **Vim**: Un editor de texto altamente configurable.
-- **Neovim**: Una bifurcación de Vim con soporte para plugins y facilidades de desarrollo.
+- **Vim**
+- **Neovim**
 
-## Pasos Generales
+<h2>Recursos Adicionales</h2>
 
-1. **Instalar Volta** (si aún no lo has hecho): Para gestionar tus versiones de Node.js y Yarn.
-2. **Instalar VSCode**: Elige el plan que mejor se adapte a tus necesidades.
-3. **Configurar tu entorno de desarrollo**: Selecciona tu terminal preferido y configúralo según tus gustos.
-
-## Recursos Adicionales
-
-### Documentación Oficial
-
-- **Volta**: [Enlace a la documentación oficial de Volta](https://volta.sh/)
-- **Node.js**: [Enlace a la documentación oficial de Node.js](https://nodejs.org/en/docs/)
-- **Yarn**: [Enlace a la documentación oficial de Yarn](https://yarnpkg.com/getting-started)
+<h3>Documentación Oficial</h3>
+<ul>
+  <li><a>Volta</a></li>
+  <li><a>Node</a></li>
+  <li><a>Yarn</a></li>
+</ul>
 
 ### Comunidades Online
 
