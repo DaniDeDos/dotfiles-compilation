@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
-#|---/ /+------------------+---/ /|#
-#|--/ /-| Global functions |--/ /-|#
-#|-/ /--| Prasanth Rangan  |-/ /--|#
-#|/ /---+------------------+/ /---|#
+#|-----+---------------------------------+-----#
+#|-----|           Global Functions      |-----#
+#|-----|          by DaniDeDos           |-----#
+#|-----+---------------------------------+-----#
+
+# shellcheck disable=SC2034
+# shellcheck disable=SC2154
+# shellcheck disable=SC2162
+# shellcheck disable=SC2163
+# shellcheck disable=SC2181
 
 set -e
 
 scrDir="$(dirname "$(realpath "$0")")"
-# shellcheck disable=SC2034
 cloneDir="$(dirname "${scrDir}")"
-# shellcheck disable=SC2034
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-# shellcheck disable=SC2034
 cacheDir="$HOME/.cache/hyde"
-# shellcheck disable=SC2034
 aurList=(yay paru)
-# shellcheck disable=SC2034
 shlList=(zsh fish)
 
 pkg_installed() {
@@ -34,7 +35,6 @@ chk_list() {
     for pkg in "${inList[@]}"; do
         if pkg_installed "${pkg}"; then
             printf -v "${vrType}" "%s" "${pkg}"
-            # shellcheck disable=SC2163
             export "${vrType}"
             return 0
         fi
@@ -55,7 +55,6 @@ pkg_available() {
 aur_available() {
     local PkgIn=$1
 
-    # shellcheck disable=SC2154
     if ${aurhlpr} -Si "${PkgIn}" &>/dev/null; then
         return 0
     else
@@ -91,9 +90,7 @@ prompt_timer() {
     local msg=$2
     while [[ ${timsec} -ge 0 ]]; do
         echo -ne "\r :: ${msg} (${timsec}s) : "
-        # shellcheck disable=SC2162
         read -t 1 -n 1 promptIn
-        # shellcheck disable=SC2181
         [ $? -eq 0 ] && break
         ((timsec--))
     done

@@ -3,7 +3,7 @@
 <details closed>
   <summary><h2>Objetivo</h2></summary>
   
-- Implementar una instalación eficiente y rápida, basada en la instalación mínima de Arch Linux, configurando una interfaz simple y acogedora mediante Hyperland y dotfiles personalizados. 
+- Implementar una instalación eficiente y mínima de Arch Linux, configurando una interfaz simple y acogedora mediante Hyperland y dotfiles personalizados. 
 - Integrar las herramientas esenciales, optimizadas al máximo, para maximizar la productividad en el desarrollo web y la interacción con la terminal.
 - Simplificar la mayor cantidad de pasos posibles, permitiendo que tanto principiantes como expertos obtengan su entorno listo para trabajar y aumenten su productividad en el menor tiempo posible.
 
@@ -26,3 +26,4 @@
 Agregar alias en la terminal para ajusta la imagen a la caja del neofetch
 alias neofetch="neofetch --size none"
 --!>
+
