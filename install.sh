@@ -12,6 +12,7 @@
 # shellcheck disable=SC2162
 # shellcheck disable=SC2181
 # shellcheck disable=SC2320
+# shellcheck disable=SC2046
 
 # Imprimir Banner
 cat <<"EOF"
@@ -80,7 +81,8 @@ while getopts idrs RunStep; do
      esac
 done
 
-#  si $OPTIND es igual a 1. Esto significa que solo se ha pasado una opción. En este caso, todas las banderas (flg_Install, flg_Restore, flg_Service) se establecen en 1, indicando que todas las acciones posibles deben ser realizadas por el script.
+# si $OPTIND es igual a 1. Esto significa que solo se ha pasado una opción. En este caso, todas las banderas (flg_Install, flg_Restore, flg_Service)
+# se establecen en 1, indicando que todas las acciones posibles deben ser realizadas por el script.
 # si no pasa flag = 1, si pasa 1 = 2, si pasa dos flag =3 y asi;
 if [ $OPTIND -eq 1 ]; then
      flg_Install=1
@@ -99,25 +101,112 @@ echo "flg_Service: $flg_Service"
 
 if [ ${flg_Install} -eq 1 ] && [ ${flg_Restore} -eq 1 ]; then
 
+     # Otorgar permisos de ejecución al script boot.sh
+     sudo chown $(whoami):$(id -gn) "${scrDir}/scripts/boot.sh"
+     sudo chown $(whoami):$(id -gn) "${scrDir}/scripts/pacman.sh"
+
      cat <<"EOF"
-  ____              _   
- |  _ \            | |  
- | |_) | ___   ___ | |_ 
- |  _ < / _ \ / _ \| __|
+  _                 _   
+ | |               | |  
+ | |__   ___   ___ | |_ 
+ | '_ \ / _ \ / _ \| __|
  | |_) | (_) | (_) | |_ 
- |____/ \___/ \___/ \__|
-                          
+ |_.__/ \___/ \___/ \__|
+                        
 EOF
 
      # Cambiar el propietario del script boot.sh a root
      # chown root:root "${scrDir}/scripts/boot.sh"
-     sudo chown $(whoami):$(id -gn) "${scrDir}/scripts/boot.sh"
-     echo "Nombre de usuario actual: $(whoami)"
-
-     # Otorgar permisos de ejecución al script boot.sh
-     chmod +x "${scrDir}/scripts/boot.sh"
 
      # Ejecutar el script boot.sh
      "${scrDir}/scripts/boot.sh"
+
+     cat <<"EOF"
+  _ __   __ _  ___ _ __ ___   __ _ _ __  
+ | '_ \ / _` |/ __| '_ ` _ \ / _` | '_ \ 
+ | |_) | (_| | (__| | | | | | (_| | | | |
+ | .__/ \__,_|\___|_| |_| |_|\__,_|_| |_|
+ | |                                     
+ |_|                                     
+
+EOF
+     # Ejecutar el script pacman.sh
+     "${scrDir}/scripts/pacman.sh"
 fi
-# sudo./install.sh -t tela -s 2k
+
+#------------#
+# installing #
+#------------#
+if [ ${flg_Install} -eq 1 ]; then
+     cat <<"EOF"
+
+ _         _       _ _ _
+|_|___ ___| |_ ___| | |_|___ ___
+| |   |_ -|  _| .'| | | |   | . |
+|_|_|_|___|_| |__,|_|_|_|_|_|_  |
+                            |___|
+
+EOF
+
+     #-------------------------------#
+     # Preparar la lista de paquetes #
+     #-------------------------------#
+
+     shift $((OPTIND - 1))
+     cust_pkg=$1
+     cp "${scrDir}/data/custom_hypr.lst" "${scrDir}/install_pkg.lst"
+
+     if [ -f "${cust_pkg}" ] && [ ! -z "${cust_pkg}" ]; then
+          cat "${cust_pkg}" >>"${scrDir}/install_pkg.lst"
+     fi
+
+     #--------------------------------#
+     # add nvidia drivers to the list #
+     #--------------------------------#
+     if nvidia_detect; then
+          cat /usr/lib/modules/*/pkgbase | while read krnl; do
+               echo "${krnl}-headers" >>"${scrDir}/install_pkg.lst"
+          done
+          nvidia_detect --drivers >>"${scrDir}/install_pkg.lst"
+     fi
+
+     nvidia_detect --verbose
+
+     #----------------#
+     # get user prefs #
+     #----------------#
+     if ! chk_list "aurhlpr" "${aurList[@]}"; then
+          echo -e "Available aur helpers:\n[1] yay\n[2] paru"
+          prompt_timer 120 "Enter option number"
+
+          case "${promptIn}" in
+          1) export getAur="yay" ;;
+          2) export getAur="paru" ;;
+          *)
+               echo -e "...Invalid option selected..."
+               exit 1
+               ;;
+          esac
+     fi
+
+     if ! chk_list "myShell" "${shlList[@]}"; then
+          echo -e "Select shell:\n[1] zsh\n[2] fish"
+          prompt_timer 120 "Enter option number"
+
+          case "${promptIn}" in
+          1) export myShell="zsh" ;;
+          2) export myShell="fish" ;;
+          *)
+               echo -e "...Invalid option selected..."
+               exit 1
+               ;;
+          esac
+          echo "${myShell}" >>"${scrDir}/install_pkg.lst"
+     fi
+
+     #--------------------------------#
+     # install packages from the list #
+     #--------------------------------#
+     "${scrDir}/install_pkg.sh" "${scrDir}/install_pkg.lst"
+     rm "${scrDir}/install_pkg.lst"
+fi

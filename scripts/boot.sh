@@ -61,10 +61,13 @@ configure_grub() {
         create_tempPath
 
         # Extraer el archivo.tar.gz en el directorio especificado
-        tar -xzf ${cloneDir}/source/arcs/grub2-themes-master.tar.gz -C $HOME/repos/temp/
+        tar -xzf ${cloneDir}/data/arcs/grub/grub2-themes-master.tar.gz -C $HOME/repos/temp/
         chmod +x $HOME/repos/temp/grub2-themes-master/install.sh
 
         bash $HOME/repos/temp/grub2-themes-master/install.sh -t $grubtheme -s $grub_screen
+
+        # Eliminar la carpeta con los archivos del tema GRUB.
+        rm -rf $HOME/repos/temp/grub2-themes-master
 
     fi
 }
@@ -84,7 +87,6 @@ if pkg_installed grub && [ -f /boot/grub/grub.cfg ]; then
         if [[ $resp =~ ^([sS])$ ]]; then
             configure_grub
         fi
-        echo "respuesta: $resp"
 
     fi
 fi
