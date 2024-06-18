@@ -1,0 +1,4 @@
+set -e
+- Si un comando falla, el script se detendrá inmediatamente. 
+- Evitando que se ejecute cualquier comando posterior. 
+- Garantizar que todos los comandos se ejecuten con éxito antes de proceder. 

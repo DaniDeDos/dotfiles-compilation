@@ -35,19 +35,14 @@ EOF
 
 # Determina el directorio actual del script
 scrDir=$(dirname "$(realpath "$0")")
-echo "Current directory: $scrDir"
+echo "install.sh directory: $scrDir"
 
 # Carga todas las funciones definidas en el archivo global_fn.sh
-source "${scrDir}/utils/global.sh"
-
-###########/\
-###########||
-###########||
-###########||
+source "${scrDir}/scripts/utils/global.sh"
 
 # Verifica si la carga fue exitosa
 if [ $? -ne 0 ]; then
-     echo "Error: incapaz de cargar global_fn.sh..."
+     echo "Error: incapaz de cargar global.sh..."
      exit 1
 fi
 
@@ -103,14 +98,26 @@ echo "flg_Service: $flg_Service"
 #----------------------------#
 
 if [ ${flg_Install} -eq 1 ] && [ ${flg_Restore} -eq 1 ]; then
-     cat <<"EOF"
-                _         _       _ _
- ___ ___ ___   |_|___ ___| |_ ___| | |
-| . |  _| -_|  | |   |_ -|  _| .'| | |
-|  _|_| |___|  |_|_|_|___|_| |__,|_|_|
-|_|
 
+     cat <<"EOF"
+  ____              _   
+ |  _ \            | |  
+ | |_) | ___   ___ | |_ 
+ |  _ < / _ \ / _ \| __|
+ | |_) | (_) | (_) | |_ 
+ |____/ \___/ \___/ \__|
+                          
 EOF
 
-     "${scrDir}/scripts/install_pre.sh"
+     # Cambiar el propietario del script boot.sh a root
+     # chown root:root "${scrDir}/scripts/boot.sh"
+     sudo chown $(whoami):$(id -gn) "${scrDir}/scripts/boot.sh"
+     echo "Nombre de usuario actual: $(whoami)"
+
+     # Otorgar permisos de ejecución al script boot.sh
+     chmod +x "${scrDir}/scripts/boot.sh"
+
+     # Ejecutar el script boot.sh
+     "${scrDir}/scripts/boot.sh"
 fi
+# sudo./install.sh -t tela -s 2k
