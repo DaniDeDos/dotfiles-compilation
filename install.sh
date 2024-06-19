@@ -154,10 +154,10 @@ EOF
 
      shift $((OPTIND - 1))
      cust_pkg=$1
-     cp "${scrDir}/data/custom_hypr.lst" "${scrDir}/install_pkg.lst"
+     cp "${scrDir}/data/custom_hypr.lst" "$HOME/repos/temp/install_pkg.lst"
 
      if [ -f "${cust_pkg}" ] && [ ! -z "${cust_pkg}" ]; then
-          cat "${cust_pkg}" >>"${scrDir}/install_pkg.lst"
+          cat "${cust_pkg}" >>"$HOME/repos/temp/install_pkg.lst"
      fi
 
      #--------------------------------#
@@ -165,9 +165,9 @@ EOF
      #--------------------------------#
      if nvidia_detect; then
           cat /usr/lib/modules/*/pkgbase | while read krnl; do
-               echo "${krnl}-headers" >>"${scrDir}/install_pkg.lst"
+               echo "${krnl}-headers" >>"$HOME/repos/temp/install_pkg.lst"
           done
-          nvidia_detect --drivers >>"${scrDir}/install_pkg.lst"
+          nvidia_detect --drivers >>"$HOME/repos/temp/install_pkg.lst"
      fi
 
      nvidia_detect --verbose
@@ -189,24 +189,9 @@ EOF
           esac
      fi
 
-     if ! chk_list "myShell" "${shlList[@]}"; then
-          echo -e "Select shell:\n[1] zsh\n[2] fish"
-          prompt_timer 120 "Enter option number"
-
-          case "${promptIn}" in
-          1) export myShell="zsh" ;;
-          2) export myShell="fish" ;;
-          *)
-               echo -e "...Invalid option selected..."
-               exit 1
-               ;;
-          esac
-          echo "${myShell}" >>"${scrDir}/install_pkg.lst"
-     fi
-
      #--------------------------------#
      # install packages from the list #
      #--------------------------------#
-     "${scrDir}/install_pkg.sh" "${scrDir}/install_pkg.lst"
-     rm "${scrDir}/install_pkg.lst"
+     "${scrDir}/scripts/install_pkg.sh" "$HOME/repos/temp/install_pkg.lst"
+     rm "$HOME/repos/temp/install_pkg.lst"
 fi

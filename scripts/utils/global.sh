@@ -19,7 +19,6 @@ cloneDir="$(dirname "${scrDir}")"
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
 cacheDir="$HOME/.cache/compilation"
 aurList=(yay paru)
-shlList=(zsh fish)
 
 # Verifica si un paquete específico está instalado.
 pkg_installed() {
