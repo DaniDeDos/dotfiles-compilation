@@ -217,14 +217,56 @@ EOF
           themeNameQ+=("${themeName//\"/}")
           themeRepoQ+=("${themeRepo//\"/}")
           themePath="${confDir}/hyde/themes/${themeName}"
-          echo "ruta asere: $themePath"
-          #[ -d "${themePath}" ] || mkdir -p "${themePath}"
-          #[ -f "${themePath}/.sort" ] || echo "${#themeNameQ[@]}" >"${themePath}/.sort"
-     done <"${scrDir}/themepatcher.lst"
-     #parallel --bar --link "${scrDir}/themepatcher.sh" "{1}" "{2}" "{3}" "{4}" ::: "${themeNameQ[@]}" ::: "${themeRepoQ[@]}" ::: "--skipcaching" ::: "false"
-     #echo -e "\n\033[0;32m[cache]\033[0m generating cache files..."
-     #"$HOME/.local/share/bin/swwwallcache.sh" -t ""
-     # if printenv HYPRLAND_INSTANCE_SIGNATURE &>/dev/null; then
-     #    "$HOME/.local/share/bin/themeswitch.sh" &>/dev/null
-     #fi
+          [ -d "${themePath}" ] || mkdir -p "${themePath}"
+          [ -f "${themePath}/.sort" ] || echo "${#themeNameQ[@]}" >"${themePath}/.sort"
+     done <"${scrDir}/data/install/themepatcher.lst"
+     #parallel --bar --link "${scrDir}/scripts/themepatcher.sh" "{1}" "{2}" "{3}" "{4}" ::: "${themeNameQ[@]}" ::: "${themeRepoQ[@]}" ::: "--skipcaching" ::: "false"
+     echo -e "\n\033[0;32m[cache]\033[0m generating cache files..."
+     "$HOME/.local/share/bin/swwwallcache.sh" -t ""
+     if printenv HYPRLAND_INSTANCE_SIGNATURE &>/dev/null; then
+          "$HOME/.local/share/bin/themeswitch.sh" &>/dev/null
+     fi
+fi
+
+#---------------------#
+# post-install script #
+#---------------------#
+if [ ${flg_Install} -eq 1 ] && [ ${flg_Restore} -eq 1 ]; then
+     cat <<"EOF"
+
+             _      _         _       _ _
+ ___ ___ ___| |_   |_|___ ___| |_ ___| | |
+| . | . |_ -|  _|  | |   |_ -|  _| .'| | |
+|  _|___|___|_|    |_|_|_|___|_| |__,|_|_|
+|_|
+
+EOF
+
+     "${scrDir}/scripts/install_pst.sh"
+fi
+
+#------------------------#
+# enable system services #
+#------------------------#
+if [ ${flg_Service} -eq 1 ]; then
+     cat <<"EOF"
+
+                 _
+ ___ ___ ___ _ _|_|___ ___ ___
+|_ -| -_|  _| | | |  _| -_|_ -|
+|___|___|_|  \_/|_|___|___|___|
+
+EOF
+
+     while read servChk; do
+
+          if [[ $(systemctl list-units --all -t service --full --no-legend "${servChk}.service" | sed 's/^\s*//g' | cut -f1 -d' ') == "${servChk}.service" ]]; then
+               echo -e "\033[0;33m[SKIP]\033[0m ${servChk} service is active..."
+          else
+               echo -e "\033[0;32m[systemctl]\033[0m starting ${servChk} system service..."
+               sudo systemctl enable "${servChk}.service"
+               sudo systemctl start "${servChk}.service"
+          fi
+
+     done <"${scrDir}/data/install/system_ctl.lst"
 fi
