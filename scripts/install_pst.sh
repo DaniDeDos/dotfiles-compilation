@@ -8,6 +8,7 @@
 # shellcheck disable=SC2162
 # shellcheck disable=SC2154
 # shellcheck disable=SC2086
+# shellcheck disable=SC2181
 
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/utils/global.sh"
@@ -51,19 +52,8 @@ else
     echo -e "\033[0;33m[WARNING]\033[0m sddm is not installed..."
 fi
 
-# dolphin
-if pkg_installed dolphin && pkg_installed xdg-utils; then
-
-    echo -e "\033[0;32m[FILEMANAGER]\033[0m detected // dolphin"
-    xdg-mime default org.kde.dolphin.desktop inode/directory
-    echo -e "\033[0;32m[FILEMANAGER]\033[0m setting" $(xdg-mime query default "inode/directory") "as default file explorer..."
-
-else
-    echo -e "\033[0;33m[WARNING]\033[0m dolphin is not installed..."
-fi
-
 # shell ######################################################
-#"${scrDir}/scripts/restore_shl.sh"
+"${scrDir}/restore_shl.sh"
 
 # flatpak
 if ! pkg_installed flatpak; then

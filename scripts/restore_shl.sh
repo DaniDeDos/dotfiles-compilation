@@ -4,6 +4,10 @@
 #|-/ /--| Prasanth Rangan           |-/ /--|#
 #|/ /---+---------------------------+/ /---|#
 
+# shellcheck disable=SC1091
+# shellcheck disable=SC2181
+# shellcheck disable=SC2162
+
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/utils/global.sh"
 if [ $? -ne 0 ]; then
@@ -19,7 +23,7 @@ if pkg_installed zsh && pkg_installed oh-my-zsh-git; then
     # set variables
     Zsh_rc="${ZDOTDIR:-$HOME}/.zshrc"
     Zsh_Path="/usr/share/oh-my-zsh"
-    Zsh_Plugins="$Zsh_Path/custom/plugins"
+    Zsh_Plugins="$Zsh_Path/plugins"
     Fix_Completion=""
 
     # generate plugins from list
@@ -28,12 +32,9 @@ if pkg_installed zsh && pkg_installed oh-my-zsh-git; then
         if [ "${r_plugin:0:4}" == "http" ] && [ ! -d "${Zsh_Plugins}/${z_plugin}" ]; then
             sudo git clone "${r_plugin}" "${Zsh_Plugins}/${z_plugin}"
         fi
-        if [ "${z_plugin}" == "zsh-completions" ] && [ "$(grep 'fpath+=.*plugins/zsh-completions/src' "${Zsh_rc}" | wc -l)" -eq 0 ]; then
-            Fix_Completion='\nfpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}/custom}/plugins/zsh-completions/src'
-        else
-            [ -z "${z_plugin}" ] || w_plugin+=" ${z_plugin}"
-        fi
-    done < <(cut -d '#' -f 1 "${scrDir}/restore_zsh.lst" | sed 's/ //g')
+
+        [ -z "${z_plugin}" ] || w_plugin+=" ${z_plugin}"
+    done < <(cut -d '#' -f 1 "${cloneDir}/data/restore/restore_zsh.lst" | sed 's/ //g')
 
     # update plugin array in zshrc
     echo -e "\033[0;32m[SHELL]\033[0m intalling plugins (${w_plugin} )"

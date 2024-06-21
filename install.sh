@@ -250,7 +250,6 @@ fi
 #------------------------#
 if [ ${flg_Service} -eq 1 ]; then
      cat <<"EOF"
-
                  _
  ___ ___ ___ _ _|_|___ ___ ___
 |_ -| -_|  _| | | |  _| -_|_ -|
@@ -270,4 +269,3 @@ EOF
 
      done <"${scrDir}/data/install/system_ctl.lst"
 fi
-
